@@ -1,0 +1,43 @@
+{# templates/components/UI/Button.html.twig #}
+
+{% set variants = {
+    primary: 'bg-primary-dark text-white hover:bg-primary-dark/90 focus:ring-primary-dark',
+    secondary: 'bg-secondary-dark text-white hover:bg-secondary-dark/90 focus:ring-secondary-dark',
+    danger: 'bg-danger-dark text-white hover:bg-danger-dark/90 focus:ring-danger-dark',
+    success: 'bg-success-dark text-white hover:bg-success-dark/90 focus:ring-success-dark',
+    ghost: 'bg-transparent text-ghost-dark hover:bg-ghost-light focus:ring-ghost-dark'
+} %}
+
+{% set sizes = {
+    sm: 'px-3 py-1.5 text-xs',
+    md: 'px-4 py-2.5 text-sm',
+    lg: 'px-6 py-3 text-base'
+} %}
+
+{% set classes = [
+    'inline-flex items-center justify-center gap-2',
+    'rounded-lg',
+    'font-semibold',
+    'transition duration-200',
+    'focus:outline-none',
+    'focus:ring-2',
+    'focus:ring-offset-2',
+    'disabled:pointer-events-none',
+    'disabled:opacity-50',
+    variants[variant],
+    sizes[size]
+]|join(' ') %}
+
+{% if tag == 'a' %}
+
+	<a {{ attributes.defaults({ class: classes } ) }}>
+		{{ block('content') }}
+	</a>
+
+{% else %}
+
+	<button {{ attributes.defaults({ type: type, class: classes } ) }}>
+		{{ block('content') }}
+	</button>
+
+{% endif %}
