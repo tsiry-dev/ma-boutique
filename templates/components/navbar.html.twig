@@ -1,29 +1,23 @@
-<nav class="border-b border-gray-200 bg-white dark:bg-ghost-dark" data-controller="navbar">
-
+<nav class="fixed top-0 inset-x-0 z-50 border-b border-gray-200 bg-white dark:bg-dark" data-controller="navbar">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-
-		<div
-			class="flex h-16 items-center justify-between">
-			{# Logo #}
-
-			<a href="#" class="text-xl font-bold tracking-tight text-gray-950 dark:text-white">
+		<div class="flex h-16 items-center justify-between">
+			<a href="{{ path('home') }}" class="text-xl font-bold tracking-tight text-gray-950 dark:text-white">
 				MaBoutique
 			</a>
 
 			<div class="hidden items-center gap-1 lg:flex">
-				<twig:NavLink href="#">
-					Acceuil
+				<twig:NavLink href="{{ path('home') }}">
+					Accueil
 				</twig:NavLink>
-				<twig:NavLink>
+				<twig:NavLink href="{{ path('about') }}">
 					A propos
 				</twig:NavLink>
-
-
-				{#---------Produit--------#}
 				<div class="group relative">
+
 					<twig:NavLink class="flex items-center gap-1 transition">
 						Pages
+
 						<svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/>
 						</svg>
@@ -35,6 +29,7 @@
 						<div class="overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-2xl">
 
 							<div class="mb-5">
+
 								<p class="text-xs font-semibold uppercase tracking-wider text-gray-400">
 									Découvrir
 								</p>
@@ -42,6 +37,7 @@
 								<h3 class="mt-1 text-lg font-bold text-gray-950">
 									Explorez MaBoutique
 								</h3>
+
 							</div>
 
 
@@ -92,7 +88,7 @@
 								</a>
 
 
-								<a href="#" class="group/item rounded-xl p-4 transition hover:bg-gray-50">
+								<a href="{{ path('contact') }}" class="group/item rounded-xl p-4 transition hover:bg-gray-50">
 									<div class="mb-3 text-xl">
 										📞
 									</div>
@@ -109,23 +105,27 @@
 							</div>
 
 						</div>
-					</div>
-				</div>
 
-				{#---------Produit--------#}
+					</div>
+
+				</div>
 				<div class="group relative">
+
 					<twig:NavLink class="flex items-center gap-1 transition">
 						Produits
+
 						<svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/>
 						</svg>
 					</twig:NavLink>
+
 
 					<div class="invisible absolute left-1/2 top-full z-50 w-[700px] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
 
 						<div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
 
 							<div class="grid grid-cols-3">
+
 								<div class="bg-gray-950 p-6 text-white">
 
 									<p class="text-xs font-semibold uppercase tracking-wider text-gray-400">
@@ -143,13 +143,16 @@
 									<a href="#" class="mt-6 inline-block text-sm font-semibold hover:underline">
 										Voir tout →
 									</a>
+
 								</div>
+
 
 								<div class="col-span-2 p-6">
 
 									<p class="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-400">
 										Collections
 									</p>
+
 
 									<div class="grid grid-cols-2 gap-2">
 
@@ -224,11 +227,11 @@
 
 				</div>
 
-
-				{#---------Categories--------#}
 				<div class="group relative">
+
 					<twig:NavLink class="flex items-center gap-1 transition">
 						Categories
+
 						<svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/>
 						</svg>
@@ -236,8 +239,11 @@
 
 
 					<div class="invisible absolute left-1/2 top-full z-50 w-[600px] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+
 						<div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-2xl">
+
 							<div class="grid grid-cols-3 gap-2">
+
 								<a href="#" class="rounded-xl p-4 transition hover:bg-gray-50">
 									<span class="text-2xl">👕</span>
 
@@ -322,18 +328,197 @@
 					</div>
 
 				</div>
+				<twig:NavLink href="{{ path('contact') }}">
+					Contact
+				</twig:NavLink>
+			</div>
+
+			<div class="hidden items-center gap-2 lg:flex">
+				<a href="#" class="flex size-10 items-center justify-center rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Rechercher">
+					<twig:ux:icon name="bi:search" class="size-5"/>
+				</a>
+				<a href="#" class="relative flex size-10 items-center justify-center rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Panier">
+					<twig:ux:icon name="bi:cart" class="size-5"/>
+
+					<span class="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-primary-dark text-[10px] font-bold text-white">
+						0
+					</span>
+				</a>
+				<div class="mx-1 h-6 w-px bg-gray-200 dark:bg-gray-700"></div>
+				<div data-controller="theme">
+					<button type="button" data-action="click->theme#toggle" class="flex size-10 items-center justify-center rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Changer le thème">
+						<twig:ux:icon name="bi:sun" class="hidden size-5 dark:block"/>
+						<twig:ux:icon name="bi:moon" class="size-5 dark:hidden"/>
+					</button>
+				</div>
+
+				<twig:UI:Button tag="a" href="#">
+					Connexion
+				</twig:UI:Button>
+
+				<twig:UI:Button variant="secondary">
+					Inscription
+				</twig:UI:Button>
+			</div>
+
+			<div
+				class="flex items-center gap-2 lg:hidden">
+
+				{#---------Search menu-----------#}
+				<a href="#" class="flex size-10 items-center justify-center rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Rechercher">
+					<twig:ux:icon name="bi:search" class="size-5"/>
+				</a>
+
+				{#---------Cart menu-----------#}
+				<a href="#" class="relative flex size-10 items-center justify-center rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Panier">
+					<twig:ux:icon name="bi:cart" class="size-5"/>
+
+					<span class="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-primary-dark text-[10px] font-bold text-white">
+						0
+					</span>
+				</a>
+
+
+				{#---------Theme button-----------#}
+				<div data-controller="theme">
+
+					<button type="button" data-action="click->theme#toggle" class="flex size-10 items-center justify-center rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Changer le thème">
+						<twig:ux:icon name="bi:sun" class="hidden size-5 dark:block"/>
+						<twig:ux:icon name="bi:moon" class="size-5 dark:hidden"/>
+					</button>
+
+				</div>
+
+				{#---------Mobile menu-----------#}
+				<button type="button" class="flex size-10 items-center justify-center rounded-lg text-gray-700 transition hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800" data-action="click->navbar#toggleMobileMenu" aria-label="Ouvrir le menu">
+					<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+					</svg>
+				</button>
+
+			</div>
+
+		</div>
+
+
+		<div class="hidden border-t border-gray-100 py-4 dark:border-gray-700 lg:hidden" data-navbar-target="mobileMenu">
+
+			<div
+				class="space-y-1">
+
+				{# Accueil #}
+				<twig:NavLinkMobile href="#">
+					Accueil
+				</twig:NavLinkMobile>
+
+
+				{# A propos #}
+				<twig:NavLinkMobile href="#">
+					A propos
+				</twig:NavLinkMobile>
+
+
+				{# Pages #}
+				<twig:NavLinkMobile data-action="click->navbar#togglePages" class="flex w-full items-center justify-between">
+					Pages
+
+					<span>+</span>
+				</twig:NavLinkMobile>
+
+
+				<div class="hidden rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-800" data-navbar-target="pagesMenu">
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Notre boutique
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Nouveautés
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Promotions
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Contact
+					</a>
+
+				</div>
+
+
+				{# Produits #}
+				<twig:NavLinkMobile data-action="click->navbar#toggleProducts" class="flex w-full items-center justify-between">
+					Produits
+
+					<span>+</span>
+				</twig:NavLinkMobile>
+
+
+				<div class="hidden rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-800" data-navbar-target="productsMenu">
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Vêtements
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Chaussures
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Accessoires
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Premium
+					</a>
+
+				</div>
+
+
+				{# Categories #}
+				<twig:NavLinkMobile data-action="click->navbar#toggleCategories" class="flex w-full items-center justify-between">
+					Categories
+
+					<span>+</span>
+				</twig:NavLinkMobile>
+
+
+				<div class="hidden rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-800" data-navbar-target="categoriesMenu">
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Mode
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Électronique
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Maison
+					</a>
+
+					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
+						Gaming
+					</a>
+
+				</div>
+
+
+				{# Contact #}
+				<twig:NavLinkMobile href="#">
+					<span class="flex items-center gap-3">
+						<twig:ux:icon name="bi:telephone" class="size-5"/>
+
+						Contact
+					</span>
+				</twig:NavLinkMobile>
 
 			</div>
 
 
-			<div class="hidden items-center gap-2 lg:flex">
-				<div data-controller="theme">
-					<twig:UI:Button href="#" data-action="click->theme#toggle" class="">
-						<twig:ux:icon name="bi:sun" class="h-5 w-5 hidden dark:block"/>
-
-						<twig:ux:icon name="bi:moon" class="dark:hidden h-5 w-5"/>
-					</twig:UI:Button>
-				</div>
+			{# ----------------MOBILE AUTH ----------------#}
+			<div class="mt-4 grid grid-cols-2 gap-2 border-t border-gray-100 pt-4 dark:border-gray-700">
 
 				<twig:UI:Button tag="a" href="#">
 					Connexion
@@ -345,120 +530,7 @@
 
 			</div>
 
-
-			<button type="button" class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100 lg:hidden" data-action="click->navbar#toggleMobileMenu" aria-label="Ouvrir le menu">
-				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-				</svg>
-
-			</button>
-
 		</div>
 
-		{#--------Mobile menu---------#}
-		<div class="hidden border-t border-gray-100 py-4 lg:hidden" data-navbar-target="mobileMenu">
-			<div class="space-y-1">
-
-				<a href="#" class="block rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100">
-					Accueil
-				</a>
-
-
-				<a href="#" class="block rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100">
-					À propos
-				</a>
-
-				<button type="button" class="flex w-full items-center justify-between rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100" data-action="click->navbar#togglePages">
-					Pages
-					<span>+</span>
-				</button>
-
-				<div class="hidden rounded-lg bg-gray-50 px-4 py-2" data-navbar-target="pagesMenu">
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Notre boutiques
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Nouveautés
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Promotions
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Contact
-					</a>
-
-				</div>
-
-				<button type="button" class="flex w-full items-center justify-between rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100" data-action="click->navbar#toggleProducts">
-					Produits
-
-					<span>+</span>
-				</button>
-
-
-				<div class="hidden rounded-lg bg-gray-50 px-4 py-2" data-navbar-target="productsMenu">
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Vêtements
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Chaussures
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Accessoires
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Premium
-					</a>
-
-				</div>
-
-				<button type="button" class="flex w-full items-center justify-between rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100" data-action="click->navbar#toggleCategories">
-					Catégories
-
-					<span>+</span>
-				</button>
-
-
-				<div class="hidden rounded-lg bg-gray-50 px-4 py-2" data-navbar-target="categoriesMenu">
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Mode
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Électronique
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Maison
-					</a>
-
-					<a href="#" class="block py-2 text-sm text-gray-600">
-						Gaming
-					</a>
-
-				</div>
-
-			</div>
-
-
-			<div class="mt-4 grid grid-cols-2 gap-2 border-t border-gray-100 pt-4">
-				<twig:UI:Button>
-					Connexion
-				</twig:UI:Button>
-
-				<twig:UI:Button>
-					Inscription
-				</twig:UI:Button>
-			</div>
-		</div>
 	</div>
 </nav>
