@@ -47,6 +47,9 @@
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
 
+    --color-dark: #18181b;
+    --color-blue-dark: #030712;
+
     /* Shadows */
     --shadow-card: 0 4px 20px rgb(0 0 0 / 0.08);
 }

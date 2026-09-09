@@ -1,0 +1,230 @@
+<footer {{ attributes.defaults({ } ) }} class="bg-secondary-dark text-white">
+	<div class="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+
+		<div
+			class="grid gap-12 lg:grid-cols-12">
+
+			{# Brand #}
+			<div class="lg:col-span-4">
+
+				<a href="#" class="text-2xl font-black tracking-tight">
+					MaBoutique
+				</a>
+
+
+				<p class="mt-5 max-w-sm text-sm leading-7 text-gray-400">
+					Votre destination pour découvrir des produits
+																																																																																																																																																																																																																															                    sélectionnés avec soin, au meilleur rapport
+																																																																																																																																																																																																																															                    qualité et style.
+				</p>
+
+
+				{# Réseaux sociaux #}
+				<div class="mt-7 flex items-center gap-2">
+
+					<a href="#" class="flex size-10 items-center justify-center rounded-lg bg-white/5 text-gray-400 transition hover:bg-primary-dark hover:text-white" aria-label="Facebook">
+						<twig:ux:icon name="bi:facebook" class="size-5"/>
+					</a>
+
+
+					<a href="#" class="flex size-10 items-center justify-center rounded-lg bg-white/5 text-gray-400 transition hover:bg-primary-dark hover:text-white" aria-label="Instagram">
+						<twig:ux:icon name="bi:instagram" class="size-5"/>
+					</a>
+
+
+					<a href="#" class="flex size-10 items-center justify-center rounded-lg bg-white/5 text-gray-400 transition hover:bg-primary-dark hover:text-white" aria-label="TikTok">
+						<twig:ux:icon name="bi:tiktok" class="size-5"/>
+					</a>
+
+
+					<a href="#" class="flex size-10 items-center justify-center rounded-lg bg-white/5 text-gray-400 transition hover:bg-primary-dark hover:text-white" aria-label="YouTube">
+						<twig:ux:icon name="bi:youtube" class="size-5"/>
+					</a>
+
+				</div>
+
+			</div>
+
+
+			{# Boutique #}
+			<div class="lg:col-span-2">
+
+				<h3 class="text-sm font-bold">
+					Boutique
+				</h3>
+
+				<ul class="mt-5 space-y-3">
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							Nouveautés
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							Produits
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							Catégories
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							Promotions
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							Collections
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+
+			{# Informations #}
+			<div class="lg:col-span-2">
+
+				<h3 class="text-sm font-bold">
+					Informations
+				</h3>
+
+				<ul class="mt-5 space-y-3">
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							À propos
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							Contact
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							FAQ
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							Livraison
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="text-sm text-gray-400 transition hover:text-white">
+							Retours
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+
+			{# Assistance #}
+			<div class="lg:col-span-4">
+
+				<h3 class="text-sm font-bold">
+					Besoin d'aide ?
+				</h3>
+
+				<p class="mt-5 text-sm leading-6 text-gray-400">
+					Notre équipe est disponible pour vous accompagner
+																																																																																																																																																																																																																															                    avant et après votre achat.
+				</p>
+
+
+				<div class="mt-5 space-y-4">
+
+					<a href="tel:+261000000000" class="flex items-center gap-3 text-sm text-gray-400 transition hover:text-white">
+						<span class="flex size-9 items-center justify-center rounded-lg bg-white/5">
+							<twig:ux:icon name="bi:telephone" class="size-4"/>
+						</span>
+
+						+261 00 00 000 00
+					</a>
+
+
+					<a href="mailto:contact@maboutique.com" class="flex items-center gap-3 text-sm text-gray-400 transition hover:text-white">
+						<span class="flex size-9 items-center justify-center rounded-lg bg-white/5">
+							<twig:ux:icon name="bi:envelope" class="size-4"/>
+						</span>
+
+						contact@maboutique.com
+					</a>
+
+
+					<div class="flex items-center gap-3 text-sm text-gray-400">
+
+						<span class="flex size-9 items-center justify-center rounded-lg bg-white/5">
+							<twig:ux:icon name="bi:clock" class="size-4"/>
+						</span>
+
+						Lun - Sam : 08h00 - 18h00
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div class="border-t border-white/10">
+
+		<div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between">
+
+			<p class="text-xs text-gray-500">
+				©
+				{{ "now"|date("Y") }}
+				MaBoutique. Tous droits réservés.
+			</p>
+
+
+			<div class="flex flex-wrap gap-5">
+
+				<a href="#" class="text-xs text-gray-500 transition hover:text-white">
+					Conditions générales
+				</a>
+
+				<a href="#" class="text-xs text-gray-500 transition hover:text-white">
+					Politique de confidentialité
+				</a>
+
+				<a href="#" class="text-xs text-gray-500 transition hover:text-white">
+					Mentions légales
+				</a>
+
+			</div>
+
+
+			{# Paiements #}
+			<div class="flex items-center gap-2 text-gray-500">
+
+				<twig:ux:icon name="bi:credit-card" class="size-5"/>
+				<twig:ux:icon name="bi:wallet2" class="size-5"/>
+				<twig:ux:icon name="bi:shield-check" class="size-5"/>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</footer>

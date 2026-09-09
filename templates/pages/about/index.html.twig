@@ -1,0 +1,352 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	A propos | M boutique
+{% endblock %}
+
+{% block body %}
+	<section class="relative overflow-hidden bg-secondary-dark text-white">
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,88,12,0.18),transparent_40%)]"></div>
+
+		<div class="relative mx-auto max-w-7xl px-6 py-24 lg:py-32">
+			<div class="max-w-3xl">
+
+				<p class="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-primary-dark">
+					À propos de nous
+				</p>
+
+				<h1 class="text-5xl font-black leading-tight sm:text-6xl lg:text-7xl">
+					Bien plus qu'une boutique.
+					<span class="text-primary-dark">
+						Une identité.
+					</span>
+				</h1>
+
+				<p class="mt-8 max-w-2xl text-lg leading-8 text-white/70">
+					Ma Boutique vous propose une sélection de produits pensée
+					pour celles et ceux qui recherchent qualité, style et
+					simplicité au quotidien.
+				</p>
+
+				<div class="mt-10 flex flex-wrap gap-4">
+					<twig:UI:Button variant="primary" tag="a" href="#">
+						Découvrir nos produits
+						<twig:ux:icon name="bi:arrow-right" class="size-4"/>
+					</twig:UI:Button>
+
+					<twig:UI:Button variant="ghost" tag="a" href="#">
+						Nous contacter
+					</twig:UI:Button>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-white py-20 dark:bg-secondary-dark">
+		<div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
+
+			<div>
+				<p class="text-sm font-semibold uppercase tracking-[0.25em] text-primary-dark">
+					Notre histoire
+				</p>
+
+				<h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+					Une boutique créée avec passion.
+				</h2>
+
+				<div class="mt-6 space-y-5 text-base leading-8 text-gray-600 dark:text-gray-300">
+					<p>
+						Ma Boutique est née d'une volonté simple :
+						proposer des produits de qualité tout en offrant
+						une expérience d'achat agréable et moderne.
+					</p>
+
+					<p>
+						Nous sélectionnons nos produits avec attention afin
+						de proposer une collection qui correspond aux besoins
+						et aux goûts de notre communauté.
+					</p>
+
+					<p>
+						Notre objectif est de construire une relation durable
+						avec nos clients, basée sur la confiance, la qualité
+						et un excellent service.
+					</p>
+				</div>
+			</div>
+
+			<div class="relative">
+				<div class="aspect-[4/3] overflow-hidden rounded-2xl">
+					<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80" alt="Notre boutique" class="h-full w-full object-cover transition duration-700 hover:scale-105">
+				</div>
+
+				<div class="absolute -bottom-6 -left-6 hidden rounded-2xl bg-primary-dark p-6 text-white shadow-xl sm:block">
+					<p class="text-4xl font-black">100%</p>
+					<p class="mt-1 text-sm font-medium text-white/80">
+						Passion & qualité
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="border-y border-gray-200 bg-gray-50 py-16 dark:border-gray-800 dark:bg-ghost-dark">
+		<div class="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 md:grid-cols-4">
+
+			<div class="text-center">
+				<p class="text-4xl font-black text-primary-dark">
+					500+
+				</p>
+				<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+					Produits
+				</p>
+			</div>
+
+			<div class="text-center">
+				<p class="text-4xl font-black text-primary-dark">
+					1K+
+				</p>
+				<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+					Clients satisfaits
+				</p>
+			</div>
+
+			<div class="text-center">
+				<p class="text-4xl font-black text-primary-dark">
+					98%
+				</p>
+				<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+					Avis positifs
+				</p>
+			</div>
+
+			<div class="text-center">
+				<p class="text-4xl font-black text-primary-dark">
+					24/7
+				</p>
+				<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+					Assistance
+				</p>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="bg-white py-20 dark:bg-secondary-dark">
+		<div class="mx-auto max-w-7xl px-6">
+
+			<div class="mx-auto max-w-2xl text-center">
+				<p class="text-sm font-semibold uppercase tracking-[0.25em] text-primary-dark">
+					Nos valeurs
+				</p>
+
+				<h2 class="mt-4 text-4xl font-black sm:text-5xl">
+					Ce qui nous définit
+				</h2>
+
+				<p class="mt-5 text-gray-600 dark:text-gray-400">
+					Chaque décision que nous prenons repose sur quelques
+					principes essentiels.
+				</p>
+			</div>
+
+
+			<div
+				class="mt-14 grid gap-6 md:grid-cols-3"
+			>
+
+				{# Valeur 1 #}
+				<div class="group rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-800 dark:bg-ghost-dark">
+
+					<div class="flex size-14 items-center justify-center rounded-xl bg-primary-light text-primary-dark">
+						<twig:ux:icon name="bi:gem" class="size-7"/>
+					</div>
+
+					<h3 class="mt-6 text-xl font-bold">
+						Qualité
+					</h3>
+
+					<p class="mt-3 leading-7 text-gray-600 dark:text-gray-400">
+						Nous privilégions des produits sélectionnés avec soin
+						pour garantir une expérience satisfaisante.
+					</p>
+
+				</div>
+
+
+				{# Valeur 2 #}
+				<div class="group rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-800 dark:bg-ghost-dark">
+
+					<div class="flex size-14 items-center justify-center rounded-xl bg-primary-light text-primary-dark">
+						<twig:ux:icon name="bi:heart" class="size-7"/>
+					</div>
+
+					<h3 class="mt-6 text-xl font-bold">
+						Passion
+					</h3>
+
+					<p class="mt-3 leading-7 text-gray-600 dark:text-gray-400">
+						Nous aimons ce que nous faisons et cherchons constamment
+						à améliorer notre boutique et nos produits.
+					</p>
+
+				</div>
+
+
+				{# Valeur 3 #}
+				<div class="group rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-800 dark:bg-ghost-dark">
+
+					<div class="flex size-14 items-center justify-center rounded-xl bg-primary-light text-primary-dark">
+						<twig:ux:icon name="bi:shield-check" class="size-7"/>
+					</div>
+
+					<h3 class="mt-6 text-xl font-bold">
+						Confiance
+					</h3>
+
+					<p class="mt-3 leading-7 text-gray-600 dark:text-gray-400">
+						La transparence et la confiance sont au cœur de notre
+						relation avec chaque client.
+					</p>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-gray-50 py-20 dark:bg-ghost-dark">
+		<div class="mx-auto max-w-7xl px-6">
+
+			<div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+				<div>
+					<p class="text-sm font-semibold uppercase tracking-[0.25em] text-primary-dark">
+						Pourquoi nous choisir ?
+					</p>
+
+					<h2 class="mt-4 text-4xl font-black sm:text-5xl">
+						Une expérience pensée pour vous.
+					</h2>
+
+					<p class="mt-6 leading-8 text-gray-600 dark:text-gray-400">
+						Acheter en ligne devrait être simple, rapide et
+						agréable. C'est exactement l'expérience que nous
+						cherchons à construire.
+					</p>
+				</div>
+
+
+				<div class="grid gap-6 sm:grid-cols-2">
+
+					<div class="rounded-2xl bg-white p-6 shadow-sm dark:bg-secondary-dark">
+						<twig:ux:icon name="bi:truck" class="size-7 text-primary-dark"/>
+
+						<h3 class="mt-4 font-bold">
+							Livraison rapide
+						</h3>
+
+						<p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+							Recevez vos commandes dans les meilleurs délais.
+						</p>
+					</div>
+
+
+					<div class="rounded-2xl bg-white p-6 shadow-sm dark:bg-secondary-dark">
+						<twig:ux:icon name="bi:shield-check" class="size-7 text-primary-dark"/>
+
+						<h3 class="mt-4 font-bold">
+							Paiement sécurisé
+						</h3>
+
+						<p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+							Vos informations sont protégées.
+						</p>
+					</div>
+
+
+					<div class="rounded-2xl bg-white p-6 shadow-sm dark:bg-secondary-dark">
+						<twig:ux:icon name="bi:award" class="size-7 text-primary-dark"/>
+
+						<h3 class="mt-4 font-bold">
+							Produits sélectionnés
+						</h3>
+
+						<p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+							Une sélection pensée pour répondre à vos attentes.
+						</p>
+					</div>
+
+
+					<div class="rounded-2xl bg-white p-6 shadow-sm dark:bg-secondary-dark">
+						<twig:ux:icon name="bi:headset" class="size-7 text-primary-dark"/>
+
+						<h3 class="mt-4 font-bold">
+							Service client
+						</h3>
+
+						<p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+							Une équipe disponible pour vous accompagner.
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="bg-secondary-dark py-20 text-white">
+		<div class="mx-auto max-w-4xl px-6 text-center">
+
+			<twig:ux:icon name="bi:quote" class="mx-auto size-10 text-primary-dark"/>
+
+			<h2 class="mt-6 text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
+				Notre mission est simple :
+				<span class="text-primary-dark">
+					vous aider à trouver ce qui vous correspond.
+				</span>
+			</h2>
+
+			<p class="mx-auto mt-6 max-w-2xl leading-8 text-white/60">
+				Nous voulons créer une boutique dans laquelle chaque client
+				peut trouver des produits qui correspondent à son style,
+				ses besoins et son quotidien.
+			</p>
+
+		</div>
+	</section>
+
+	<section class="bg-white py-20 dark:bg-secondary-dark">
+		<div class="mx-auto max-w-5xl px-6">
+
+			<div class="overflow-hidden rounded-3xl bg-primary-dark px-8 py-14 text-center text-white sm:px-14">
+
+				<p class="text-sm font-semibold uppercase tracking-[0.25em] text-white/70">
+					Prêt à découvrir ?
+				</p>
+
+				<h2 class="mt-4 text-4xl font-black sm:text-5xl">
+					Découvrez notre collection.
+				</h2>
+
+				<p class="mx-auto mt-5 max-w-xl leading-7 text-white/80">
+					Explorez nos produits et trouvez votre prochain coup de cœur.
+				</p>
+
+				<div class="mt-8 flex justify-center">
+					<twig:UI:Button variant="secondary" tag="a" href="#">
+						Voir les produits
+						<twig:ux:icon name="bi:arrow-right" class="size-4"/>
+					</twig:UI:Button>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+{% endblock %}
