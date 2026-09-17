@@ -1,0 +1,9 @@
+<div{{ attributes.defaults({class: 'space-y-1.5'}) }}>
+{{ form_label(field, null, {
+    label_attr: {
+        class: 'text-sm font-medium text-secondary-dark dark:text-gray-200'
+    }
+}) }}
+{{ block('content') }}
+<span class="text-red-600">{{ form_errors(field) }}</span> 
+</div>

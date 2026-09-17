@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Sécurité | M boutique
+{% endblock %}
+
+{% block body %}
+
+    <twig:Account:AccountLayout>
+        <div id="securite" class="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm sm:p-10 dark:border-gray-800 dark:bg-ghost-dark">
+
+            <h2 class="text-2xl font-black sm:text-3xl">
+                Sécurité
+            </h2>
+
+            <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                Choisissez un mot de passe robuste pour protéger votre compte.
+            </p>
+
+            <form action="#" method="post" class="mt-8 space-y-6">
+                <div class="grid gap-6 sm:grid-cols-2">
+
+                    <div class="sm:col-span-2">
+                        <label for="currentPassword" class="mb-2 block text-sm font-semibold">
+                            Mot de passe actuel
+                        </label>
+                        <input id="currentPassword" name="currentPassword" type="password" placeholder="••••••••" class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary-dark focus:ring-2 focus:ring-primary-dark/20 dark:border-gray-700 dark:bg-secondary-dark dark:placeholder:text-gray-500">
+                    </div>
+
+                    <div>
+                        <label for="newPassword" class="mb-2 block text-sm font-semibold">
+                            Nouveau mot de passe
+                        </label>
+                        <input id="newPassword" name="newPassword" type="password" placeholder="••••••••" class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary-dark focus:ring-2 focus:ring-primary-dark/20 dark:border-gray-700 dark:bg-secondary-dark dark:placeholder:text-gray-500">
+                    </div>
+
+                    <div>
+                        <label for="confirmPassword" class="mb-2 block text-sm font-semibold">
+                            Confirmer le mot de passe
+                        </label>
+                        <input id="confirmPassword" name="confirmPassword" type="password" placeholder="••••••••" class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary-dark focus:ring-2 focus:ring-primary-dark/20 dark:border-gray-700 dark:bg-secondary-dark dark:placeholder:text-gray-500">
+                    </div>
+
+                </div>
+
+                <div class="flex justify-end">
+                    <twig:UI:Button type="submit" variant="primary" size="lg">
+                        Mettre à jour le mot de passe
+                        <twig:ux:icon name="bi:shield-check" class="size-4"/>
+                    </twig:UI:Button>
+                </div>
+            </form>
+        </div>
+    </twig:Account:AccountLayout>
+
+{% endblock %}

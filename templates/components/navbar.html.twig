@@ -1,6 +1,5 @@
 <nav class="fixed top-0 inset-x-0 z-50 border-b border-gray-200 bg-white dark:bg-dark" data-controller="navbar">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
 		<div class="flex h-16 items-center justify-between">
 			<a href="{{ path('home') }}" class="text-xl font-bold tracking-tight text-gray-950 dark:text-white">
 				MaBoutique
@@ -13,60 +12,47 @@
 				<twig:NavLink href="{{ path('about') }}">
 					A propos
 				</twig:NavLink>
-				<div class="group relative">
 
+				<div class="group relative">
 					<twig:NavLink class="flex items-center gap-1 transition">
 						Pages
-
 						<svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/>
 						</svg>
 					</twig:NavLink>
 
-
 					<div class="invisible absolute left-1/2 top-full z-50 w-[520px] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-
 						<div class="overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-2xl">
-
 							<div class="mb-5">
-
 								<p class="text-xs font-semibold uppercase tracking-wider text-gray-400">
 									Découvrir
 								</p>
-
 								<h3 class="mt-1 text-lg font-bold text-gray-950">
 									Explorez MaBoutique
 								</h3>
-
 							</div>
 
 
 							<div class="grid grid-cols-2 gap-2">
-
 								<a href="#" class="group/item rounded-xl p-4 transition hover:bg-gray-50">
 									<div class="mb-3 text-xl">
 										🛍️
 									</div>
-
 									<p class="font-semibold text-gray-900">
 										Notre boutique
 									</p>
-
 									<p class="mt-1 text-xs text-gray-500">
 										Découvrez notre catalogue.
 									</p>
 								</a>
 
-
 								<a href="#" class="group/item rounded-xl p-4 transition hover:bg-gray-50">
 									<div class="mb-3 text-xl">
 										⭐
 									</div>
-
 									<p class="font-semibold text-gray-900">
 										Nouveautés
 									</p>
-
 									<p class="mt-1 text-xs text-gray-500">
 										Les derniers produits.
 									</p>
@@ -77,43 +63,33 @@
 									<div class="mb-3 text-xl">
 										🔥
 									</div>
-
 									<p class="font-semibold text-gray-900">
 										Promotions
 									</p>
-
 									<p class="mt-1 text-xs text-gray-500">
 										Nos meilleures offres.
 									</p>
 								</a>
 
-
 								<a href="{{ path('contact') }}" class="group/item rounded-xl p-4 transition hover:bg-gray-50">
 									<div class="mb-3 text-xl">
 										📞
 									</div>
-
 									<p class="font-semibold text-gray-900">
 										Contact
 									</p>
-
 									<p class="mt-1 text-xs text-gray-500">
 										Besoin d'aide ?
 									</p>
 								</a>
-
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
-				<div class="group relative">
 
+				<div class="group relative">
 					<twig:NavLink class="flex items-center gap-1 transition">
 						Produits
-
 						<svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/>
 						</svg>
@@ -121,50 +97,38 @@
 
 
 					<div class="invisible absolute left-1/2 top-full z-50 w-[700px] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-
 						<div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
-
 							<div class="grid grid-cols-3">
-
 								<div class="bg-gray-950 p-6 text-white">
-
 									<p class="text-xs font-semibold uppercase tracking-wider text-gray-400">
 										Collection
 									</p>
-
 									<h3 class="mt-3 text-2xl font-bold">
 										Nos produits
 									</h3>
-
 									<p class="mt-3 text-sm leading-6 text-gray-400">
 										Découvrez nos produits sélectionnés pour vous.
 									</p>
-
 									<a href="#" class="mt-6 inline-block text-sm font-semibold hover:underline">
 										Voir tout →
 									</a>
-
 								</div>
 
 
 								<div class="col-span-2 p-6">
-
 									<p class="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-400">
 										Collections
 									</p>
 
 
 									<div class="grid grid-cols-2 gap-2">
-
 										<a href="#" class="rounded-xl p-4 transition hover:bg-gray-50">
 											<span class="text-2xl">
 												👕
 											</span>
-
 											<p class="mt-3 font-semibold">
 												Vêtements
 											</p>
-
 											<p class="mt-1 text-xs text-gray-500">
 												T-shirts, polos...
 											</p>
@@ -175,11 +139,9 @@
 											<span class="text-2xl">
 												👟
 											</span>
-
 											<p class="mt-3 font-semibold">
 												Chaussures
 											</p>
-
 											<p class="mt-1 text-xs text-gray-500">
 												Sneakers & lifestyle
 											</p>
@@ -190,67 +152,48 @@
 											<span class="text-2xl">
 												🎒
 											</span>
-
 											<p class="mt-3 font-semibold">
 												Accessoires
 											</p>
-
 											<p class="mt-1 text-xs text-gray-500">
 												Sacs & accessoires
 											</p>
 										</a>
 
-
 										<a href="#" class="rounded-xl p-4 transition hover:bg-gray-50">
 											<span class="text-2xl">
 												💎
 											</span>
-
 											<p class="mt-3 font-semibold">
 												Premium
 											</p>
-
 											<p class="mt-1 text-xs text-gray-500">
 												Collection premium
 											</p>
 										</a>
-
 									</div>
-
 								</div>
-
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
 
 				<div class="group relative">
-
 					<twig:NavLink class="flex items-center gap-1 transition">
 						Categories
-
 						<svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/>
 						</svg>
 					</twig:NavLink>
 
-
 					<div class="invisible absolute left-1/2 top-full z-50 w-[600px] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-
 						<div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-2xl">
-
 							<div class="grid grid-cols-3 gap-2">
-
 								<a href="#" class="rounded-xl p-4 transition hover:bg-gray-50">
 									<span class="text-2xl">👕</span>
-
 									<p class="mt-3 font-semibold">
 										Mode
 									</p>
-
 									<p class="text-xs text-gray-500">
 										120 produits
 									</p>
@@ -259,11 +202,9 @@
 
 								<a href="#" class="rounded-xl p-4 transition hover:bg-gray-50">
 									<span class="text-2xl">💻</span>
-
 									<p class="mt-3 font-semibold">
 										Électronique
 									</p>
-
 									<p class="text-xs text-gray-500">
 										85 produits
 									</p>
@@ -272,11 +213,9 @@
 
 								<a href="#" class="rounded-xl p-4 transition hover:bg-gray-50">
 									<span class="text-2xl">🏠</span>
-
 									<p class="mt-3 font-semibold">
 										Maison
 									</p>
-
 									<p class="text-xs text-gray-500">
 										64 produits
 									</p>
@@ -302,31 +241,23 @@
 									<p class="mt-3 font-semibold">
 										Sport
 									</p>
-
 									<p class="text-xs text-gray-500">
 										38 produits
 									</p>
 								</a>
 
-
 								<a href="#" class="rounded-xl p-4 transition hover:bg-gray-50">
 									<span class="text-2xl">✨</span>
-
 									<p class="mt-3 font-semibold">
 										Premium
 									</p>
-
 									<p class="text-xs text-gray-500">
 										27 produits
 									</p>
 								</a>
-
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
 				<twig:NavLink href="{{ path('contact') }}">
 					Contact
@@ -352,17 +283,30 @@
 					</button>
 				</div>
 
-				<twig:UI:Button tag="a" href="#">
-					Connexion
-				</twig:UI:Button>
+				{% if app.user %}
+					<a href="{{ path('app_account') }}" class="text-gray-800 dark:text-white flex gap-2 items-center">
+						<twig:ux:icon name="lucide:user" class="size-5"/>
+						{{ app.user.firstname }}
+					</a>
 
-				<twig:UI:Button variant="secondary">
-					Inscription
-				</twig:UI:Button>
+					<twig:UI:Button tag="a" href="{{ path('app_logout') }}" variant="danger">
+						Déconnexion
+					</twig:UI:Button>
+				{% else %}
+					<twig:UI:Button tag="a" href="{{ path('app_login') }}">
+						Connexion
+					</twig:UI:Button>
+
+					<twig:UI:Button variant="secondary" tag="a" href="{{ path('app_register') }}">
+						Inscription
+					</twig:UI:Button>
+				{% endif %}
+
 			</div>
 
 			<div
-				class="flex items-center gap-2 lg:hidden">
+				class="flex items-center gap-2 lg:hidden"
+			>
 
 				{#---------Search menu-----------#}
 				<a href="#" class="flex size-10 items-center justify-center rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Rechercher">
@@ -403,134 +347,88 @@
 
 		<div class="hidden border-t border-gray-100 py-4 dark:border-gray-700 lg:hidden" data-navbar-target="mobileMenu">
 
-			<div
-				class="space-y-1">
-
-				{# Accueil #}
+			<div class="space-y-1">
 				<twig:NavLinkMobile href="#">
 					Accueil
 				</twig:NavLinkMobile>
-
-
-				{# A propos #}
 				<twig:NavLinkMobile href="#">
 					A propos
 				</twig:NavLinkMobile>
-
-
-				{# Pages #}
 				<twig:NavLinkMobile data-action="click->navbar#togglePages" class="flex w-full items-center justify-between">
 					Pages
-
 					<span>+</span>
 				</twig:NavLinkMobile>
-
-
 				<div class="hidden rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-800" data-navbar-target="pagesMenu">
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Notre boutique
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Nouveautés
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Promotions
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Contact
 					</a>
-
 				</div>
-
-
-				{# Produits #}
 				<twig:NavLinkMobile data-action="click->navbar#toggleProducts" class="flex w-full items-center justify-between">
 					Produits
-
 					<span>+</span>
 				</twig:NavLinkMobile>
 
-
 				<div class="hidden rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-800" data-navbar-target="productsMenu">
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Vêtements
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Chaussures
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Accessoires
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Premium
 					</a>
-
 				</div>
 
-
-				{# Categories #}
 				<twig:NavLinkMobile data-action="click->navbar#toggleCategories" class="flex w-full items-center justify-between">
 					Categories
-
 					<span>+</span>
 				</twig:NavLinkMobile>
 
-
 				<div class="hidden rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-800" data-navbar-target="categoriesMenu">
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Mode
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Électronique
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Maison
 					</a>
-
 					<a href="#" class="block py-2 text-sm text-gray-600 dark:text-gray-300">
 						Gaming
 					</a>
-
 				</div>
 
-
-				{# Contact #}
 				<twig:NavLinkMobile href="#">
 					<span class="flex items-center gap-3">
 						<twig:ux:icon name="bi:telephone" class="size-5"/>
-
 						Contact
 					</span>
 				</twig:NavLinkMobile>
-
 			</div>
-
 
 			{# ----------------MOBILE AUTH ----------------#}
 			<div class="mt-4 grid grid-cols-2 gap-2 border-t border-gray-100 pt-4 dark:border-gray-700">
-
-				<twig:UI:Button tag="a" href="#">
+				<twig:UI:Button tag="a" href="{{ path('app_login') }}">
 					Connexion
 				</twig:UI:Button>
-
-				<twig:UI:Button variant="secondary">
+				<twig:UI:Button variant="secondary" tag="a" href="{{ path('app_register') }}">
 					Inscription
 				</twig:UI:Button>
-
 			</div>
-
 		</div>
-
 	</div>
 </nav>

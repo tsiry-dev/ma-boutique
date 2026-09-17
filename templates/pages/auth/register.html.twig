@@ -1,0 +1,216 @@
+
+{% extends 'layouts/auth-layout.html.twig' %}
+
+{% block title %}Créer un compte | M Boutique{% endblock %}
+
+{% block body %}
+
+    <div class="grid min-h-screen lg:grid-cols-2">
+        <div class="relative hidden overflow-hidden lg:block">
+
+            <img
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85"
+                alt="Boutique de mode M Boutique"
+                class="absolute inset-0 h-full w-full object-cover"
+            >
+
+            {# Overlay #}
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            {# Contenu sur l'image #}
+            <div class="relative flex h-full flex-col justify-between p-10">
+
+                {# Logo #}
+                <a
+                    href="{{ path('home') }}"
+                    class="flex items-center gap-2 text-white"
+                >
+                    <span class="flex size-10 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+                        {{ ux_icon('bi:bag', {
+                            class: 'size-5'
+                        }) }}
+                    </span>
+
+                    <span class="text-xl font-bold">
+                        M Boutique
+                    </span>
+                </a>
+
+
+                {# Présentation #}
+                <div class="max-w-md text-white">
+
+                    <span class="mb-4 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur-sm">
+                        Mode & Style
+                    </span>
+
+                    <h2 class="text-4xl font-bold leading-tight">
+                        Découvrez votre style.
+                        <span class="text-orange-300">
+                            Affirmez votre look.
+                        </span>
+                    </h2>
+
+                    <p class="mt-4 text-sm leading-6 text-white/80">
+                        Découvrez une sélection soigneusement choisie
+                        pour vous permettre d'exprimer votre style
+                        et de rendre chaque moment unique.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="flex min-h-screen items-center justify-center px-5 py-8 sm:px-8">
+
+            <div class="w-full max-w-md">
+
+                {# En-tête #}
+                <div class="mb-6">
+
+                    <a
+                        href="{{ path('home') }}"
+                        class="mb-5 inline-flex items-center gap-2 text-sm font-medium text-gray-500 transition hover:text-primary-dark dark:text-gray-400"
+                    >
+                        {{ ux_icon('bi:arrow-left', {
+                            class: 'size-4'
+                        }) }}
+
+                        <span>Accueil</span>
+                    </a>
+
+                    <h1 class="text-2xl font-bold tracking-tight text-secondary-dark dark:text-white">
+                        Créer un compte
+                    </h1>
+
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                        Créez votre compte et commencez dès aujourd'hui.
+                    </p>
+
+                </div>
+
+
+                {# Erreurs de vérification #}
+                {% for flash_error in app.flashes('verify_email_error') %}
+
+                    <div
+                        class="mb-5 flex items-start gap-3 rounded-lg border border-danger-dark/20 bg-danger-light px-3 py-2.5 text-sm text-danger-dark"
+                        role="alert"
+                    >
+
+                        {{ ux_icon('bi:exclamation-circle', {
+                            class: 'mt-0.5 size-4 shrink-0'
+                        }) }}
+
+                        <span>
+                            {{ flash_error }}
+                        </span>
+
+                    </div>
+
+                {% endfor %}
+
+
+                {# Formulaire #}
+                {{ form_start(registrationForm, {
+                    attr: {
+                        class: 'space-y-4'
+                    }
+                }) }}
+
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <twig:Form:FormItem :field="registrationForm.firstname">
+                        {{ form_widget(registrationForm.firstname) }}
+                    </twig:Form:FormItem>
+                    <twig:Form:FormItem :field="registrationForm.lastname">
+                        {{ form_widget(registrationForm.lastname) }}
+                    </twig:Form:FormItem>
+                </div>
+
+                <twig:Form:FormItem :field="registrationForm.email">
+                    {{ form_widget(registrationForm.email) }}
+                </twig:Form:FormItem>
+
+
+                <div class="space-y-4">
+
+                    <twig:Form:FormItem :field="registrationForm.plainPassword.first">
+                        {{ form_widget(registrationForm.plainPassword.first) }}
+                    </twig:Form:FormItem>
+
+                    <twig:Form:FormItem :field="registrationForm.plainPassword.second">
+                        {{ form_widget(registrationForm.plainPassword.second) }}
+                    </twig:Form:FormItem>
+
+                </div>
+
+
+                {# Conditions générales #}
+                <div class="pt-1">
+
+                    <twig:Form:FormItem :field="registrationForm.agreeTerms">
+                        {{ form_widget(registrationForm.agreeTerms) }}
+                    </twig:Form:FormItem>
+
+                </div>
+
+
+                {# Bouton d'inscription #}
+                <button
+                    type="submit"
+                    class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-offset-2"
+                >
+
+                    {{ ux_icon('bi:person-plus', {
+                            class: 'size-4'
+                        }) }}
+
+                    <span>
+                        Créer mon compte
+                    </span>
+
+                </button>
+
+                {{ form_end(registrationForm) }}
+
+
+                {# Connexion #}
+                <div class="mt-5 text-center">
+
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+
+                        Vous avez déjà un compte ?
+
+                        <a
+                            href="{{ path('app_login') }}"
+                            class="font-semibold text-primary-dark hover:text-orange-700"
+                        >
+                            Se connecter
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+                {# Sécurité #}
+                <p class="mt-5 text-center text-xs text-gray-400">
+
+                    {{ ux_icon('bi:shield-check', {
+                        class: 'mr-1 inline-block size-3.5 align-text-bottom'
+                    }) }}
+
+                    Vos informations sont protégées en toute sécurité.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+

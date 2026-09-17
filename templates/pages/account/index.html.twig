@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Compte | M boutique
+{% endblock %}
+
+{% block body %}
+
+    <twig:Account:AccountLayout>
+        <div id="profil" class="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm sm:p-10 dark:border-gray-800 dark:bg-ghost-dark">
+
+            <div class="mb-8 flex items-start justify-between">
+                <div>
+                    <h2 class="text-2xl font-black sm:text-3xl">
+                        Informations personnelles
+                    </h2>
+
+                    <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                        Ces informations sont utilisées pour vos commandes et livraisons.
+                    </p>
+                </div>
+
+                <span class="hidden shrink-0 rounded-full bg-primary-light px-3 py-1 text-xs font-semibold text-primary-dark sm:block dark:bg-primary-dark/10">
+                    Client depuis 2023
+                </span>
+            </div>
+
+            <form action="#" method="post" class="space-y-6">
+                <div class="grid gap-6 sm:grid-cols-2">
+
+                    <div>
+                        <label for="firstName" class="mb-2 block text-sm font-semibold">
+                            Prénom
+                        </label>
+                        <input id="firstName" name="firstName" type="text" value="Jean" class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary-dark focus:ring-2 focus:ring-primary-dark/20 dark:border-gray-700 dark:bg-secondary-dark dark:placeholder:text-gray-500">
+                    </div>
+
+                    <div>
+                        <label for="lastName" class="mb-2 block text-sm font-semibold">
+                            Nom
+                        </label>
+                        <input id="lastName" name="lastName" type="text" value="Dupont" class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary-dark focus:ring-2 focus:ring-primary-dark/20 dark:border-gray-700 dark:bg-secondary-dark dark:placeholder:text-gray-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="mb-2 block text-sm font-semibold">
+                            Adresse email
+                        </label>
+                        <input id="email" name="email" type="email" value="jean.dupont@email.com" class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary-dark focus:ring-2 focus:ring-primary-dark/20 dark:border-gray-700 dark:bg-secondary-dark dark:placeholder:text-gray-500">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="mb-2 block text-sm font-semibold">
+                            Téléphone
+                        </label>
+                        <input id="phone" name="phone" type="tel" value="+261 34 12 345 67" class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary-dark focus:ring-2 focus:ring-primary-dark/20 dark:border-gray-700 dark:bg-secondary-dark dark:placeholder:text-gray-500">
+                    </div>
+
+                </div>
+
+                <div class="flex justify-end">
+                    <twig:UI:Button type="submit" variant="primary" size="lg">
+                        Enregistrer les modifications
+                        <twig:ux:icon name="bi:check2" class="size-4"/>
+                    </twig:UI:Button>
+                </div>
+            </form>
+        </div>
+    </twig:Account:AccountLayout>
+
+{% endblock %}
